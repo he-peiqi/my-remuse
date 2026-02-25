@@ -1,49 +1,78 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人简历</title>
+    <title>何佩琪 | 个人简历</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #0a0a0a; color: #ffffff; }
+        /* 自定义深蓝背景 */
+        body { background-color: #020617; }
+        
+        /* 蓝粉渐变文字效果 */
+        .text-gradient {
+            background: linear-gradient(to right, #60a5fa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* 预留 Coze 气泡动画（可选） */
+        #coze-placeholder {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 50;
+        }
     </style>
 </head>
-<body class="flex items-center justify-center min-h-screen p-6">
-    <div class="max-w-2xl w-full text-center">
-        <p class="bg-gradient-to-r from-blue-400 to-pink-400 bg-clip-text text-transparent text-sm mb-4 font-mono tracking-widest uppercase">安徽大学-物联网工程</p>
+<body class="text-slate-200 font-sans leading-relaxed">
+
+    <div class="max-w-3xl mx-auto px-6 py-20">
         
-        <h1 class="text-6xl font-bold mb-8 tracking-tighter bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">何佩琪</h1>
-        
-        <p class="text-gray-400 text-lg leading-relaxed mb-10 font-light">
-            专注于现代 Web 开发与 AI 技术应用。<br>
-            擅长使用极简主义设计构建高效、美观的数字产品体验。
-        </p>
-        
-        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <a href="tel:18672923629" class="bg-gradient-to-r from-blue-500 to-pink-500 text-white px-8 py-3 rounded-full font-bold hover:opacity-90 transition duration-300 shadow-lg shadow-pink-500/20 text-center">
-                拨打电话: 18672923629
+        <header class="text-center mb-16">
+            <p class="text-gradient font-mono tracking-widest uppercase text-sm mb-4">Anhui University</p>
+            <h1 class="text-6xl font-bold mb-6 tracking-tight text-white">何佩琪</h1>
+            <p class="text-slate-400 text-lg max-w-lg mx-auto leading-relaxed">
+                专注现代 Web 开发与 AI 技术应用。擅长以极简设计构建高效、美观的数字产品体验。
+            </p>
+        </header>
+
+        <section class="flex flex-col sm:flex-row gap-4 justify-center mb-20">
+            <a href="tel:18672923629" class="bg-gradient-to-r from-blue-500 to-pink-500 text-white px-8 py-3 rounded-full font-bold hover:opacity-90 transition shadow-lg shadow-blue-500/20 text-center">
+                一键拨号
             </a>
-            
-            <a href="mailto:hhppeiqi@outlook.com" class="bg-transparent border border-gray-700 text-gray-300 px-8 py-3 rounded-full font-bold hover:bg-gray-800 transition duration-300 text-center">
-                发送邮件: hhppeiqi@outlook.com
+            <a href="mailto:hhppeiqi@outlook.com" class="bg-slate-800 border border-slate-700 text-white px-8 py-3 rounded-full font-bold hover:bg-slate-700 transition text-center">
+                发送邮件
             </a>
-        </div>
-        
-        <div class="grid grid-cols-3 border-t border-gray-900 pt-10">
-            <div>
-                <p class="text-3xl font-bold text-white">4.22/5.00</p>
-                <p class="text-gray-600 text-xs uppercase mt-2 tracking-widest">GPA</p>
+        </section>
+
+        <section class="grid grid-cols-1 sm:grid-cols-3 gap-8 border-t border-slate-800 pt-12 mb-20">
+            <div class="text-center">
+                <p class="text-3xl font-bold text-white">4.22/5.0</p>
+                <p class="text-slate-500 text-xs uppercase mt-2 tracking-widest">GPA</p>
             </div>
-            <div>
-                <p class="text-3xl font-bold text-white">5+</p>
-                <p class="text-gray-600 text-xs uppercase mt-2 tracking-widest">Projects</p>
+            <div class="text-center">
+                <p class="text-3xl font-bold text-white text-gradient">5+</p>
+                <p class="text-slate-500 text-xs uppercase mt-2 tracking-widest">Projects</p>
             </div>
-            <div>
-                <p class="text-3xl font-bold text-white">2029</p>
-                <p class="text-gray-600 text-xs uppercase mt-2 tracking-widest">Graduate</p>
+            <div class="text-center">
+                <p class="text-3xl font-bold text-white">2026</p>
+                <p class="text-slate-500 text-xs uppercase mt-2 tracking-widest">Graduate</p>
             </div>
+        </section>
+
+        <footer class="text-center text-slate-600 text-sm border-t border-slate-800 pt-8">
+            <p>© 2026 He Peiqi. Built with Tailwind CSS & AI.</p>
+        </footer>
+
+    </div>
+
+    <div id="coze-placeholder">
+        <div class="w-12 h-12 bg-gradient-to-tr from-blue-400 to-pink-400 rounded-full flex items-center justify-center cursor-pointer shadow-xl animate-bounce">
+            <span class="text-white text-xs font-bold">AI</span>
         </div>
     </div>
+
 </body>
 </html>
+
